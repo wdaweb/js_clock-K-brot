@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background: url("./下載.jfif");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #clock {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 10px solid black;
+            border-radius: 50%;
+            background: wheat;
+            position: relative;
+        }
+
+        #hour {
+            position: absolute;
+            top: 50%;
+            width: 20%;
+            height: 6px;
+            background: red;
+            transform-origin: right center;
+            transform: rotate(0deg);
+            left: 30%;
+            border-radius: 2px;
+        }
+
+        #minute {
+            position: absolute;
+            top: 50%;
+            width: 50%;
+            height: 6px;
+            background: orange;
+            transform-origin: right center;
+            transform: rotate(0deg);
+            left: 0%;
+            border-radius: 2px;
+        }
+
+        #second {
+            position: absolute;
+            top: 50%;
+            width: 50%;
+            height: 6px;
+            background: green;
+            transform-origin: right center;
+            transform: rotate(0deg);
+            left: 0%;
+            border-radius: 2px;
+        }
+
+        #year {
+            width: 85px;
+            height: 30px;
+            border: none;
+            position: absolute;
+            top: 110%;
+            left: -5%;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: auto;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
+        }
+
+        #month {
+            width: 55px;
+            height: 30px;
+            border: none;
+            position: absolute;
+            top: 110%;
+            left: 40%;
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
+        }
+
+        #day {
+            width: 39px;
+            height: 30px;
+            border: none;
+            position: absolute;
+            top: 110%;
+            left: 70%;
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
+        }
+
+        #sec1 {
+            width: 39px;
+            height: 30px;
+            position: absolute;
+            top: 130%;
+            left: 70%;
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
+            text-align: center;
+        }
+
+        #minute1 {
+            width: 55px;
+            height: 30px;
+            position: absolute;
+            top: 130%;
+            left: 40%;
+            font-size: 2rem;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        #hour1 {
+            width: 85px;
+            height: 30px;
+            position: absolute;
+            top: 130%;
+            left: -5%;
+            font-size: 2rem;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        #word1 {
+            position: absolute;
+            top: 0%;
+            left: 45%;
+            color: red;
+        }
+
+        #word2 {
+            position: absolute;
+            top: 45%;
+            left: 90%;
+            color: red;
+        }
+
+        #word3 {
+            position: absolute;
+            top: 90%;
+            left: 45%;
+            color: red;
+        }
+
+        #word4 {
+            position: absolute;
+            top: 45%;
+            left: 0%;
+            color: red;
+        }
+
+        #point1 {
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 50px;
+        }
+
+        #point1::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 36px;
+            left: 24px;
+        }
+
+        #point1::after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 117px;
+            left: 21px;
+        }
+
+        #point2 {
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 165px;
+            right: 57px;
+        }
+
+        #point2::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 0px;
+            right: 79px;
+        }
+
+        #point2::after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: -28px;
+            right: 109px;
+        }
+
+        #point3 {
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 50px;
+        }
+
+        #point3::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 36px;
+            right: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <html>
+    <audio src="./videoplayback.m4a" autoplay></audio>
+    <div id="clock">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+        <div id="year"></div>
+        <div id="month"></div>
+        <div id="day"></div>
+        <div id="hour1"></div>
+        <div id="minute1"></div>
+        <div id="sec1"></div>
+        <div id="word1">XII</div>
+        <div id="word2">III</div>
+        <div id="word3">VI</div>
+        <div id="word4">IX</div>
+        <div id="point1"></div>
+        <div id="point2"></div>
+        <div id="point3"></div>
+    </div>
+
+    </html>
+    <script>
+        const hour = document.getElementById("hour");
+        const hour1 = document.getElementById("hour1");
+        const minute = document.getElementById("minute");
+        const minute1 = document.getElementById("minute1");
+        const sec = document.getElementById("second");
+        const sec1 = document.getElementById("sec1");
+        const year = document.getElementById("year");
+        const month = document.getElementById("month");
+        const day = document.getElementById("day");
+
+        const setDate = () => {
+            let d = new Date();
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+            hour.style.transform = `rotate( ${h * 30 + 90}deg )`;
+            hour1.innerHTML = d.getHours();
+            minute.style.transform = `rotate( ${m * 6 + 90}deg )`;
+            minute1.innerHTML = d.getMinutes();
+            sec.style.transform = `rotate( ${s * 6 + 90}deg )`;
+            sec1.innerHTML = d.getSeconds();
+            year.innerHTML = d.getFullYear();
+            month.innerHTML = d.getMonth() + 1;
+            day.innerHTML = d.getDate();
+        }
+
+        setInterval(setDate, 1000);
+        setDate();
+    </script>
+</body>
+
+</html>
